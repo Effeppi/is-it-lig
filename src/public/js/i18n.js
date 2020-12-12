@@ -1,9 +1,10 @@
 (function () {
 
 
-    const defaultPage = '/it-It'
+    const defaultPage = '/language/it-IT'
     const language = navigator.language;
     const route = window.location.href
+
 
 
     if(isLanguageSupported(language)) {
@@ -13,7 +14,10 @@
         } 
 
     } else {
-        window.location.href = defaultPage;
+        if (!isCorrectRouteForLanguage(route, defaultPage)) {
+            window.location.href = defaultPage;
+        }
+
     }
 
 
