@@ -59,6 +59,8 @@
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+        const counterString = buildCounter(days, hours, minutes, seconds);
+
         // Output the result in the element with id="counter"
         document.getElementById("counter").innerHTML = days + "d " + hours + "h " +
             minutes + "m " + seconds + "s ";
@@ -76,6 +78,10 @@
         document.getElementById("counter-div").style.display = "none";
         document.getElementById("itislig-div").style.display = "block";
 
+    }
+
+    function buildCounter(days, hours, minutes, seconds) {
+        
     }
 
 
